@@ -12,7 +12,7 @@ pipeline{
       }
     }
     stage ('Test'){
-      steps{
+      steps {
         sh 'mvn test'
       }
       post{
@@ -21,7 +21,7 @@ pipeline{
         }
       }
       stage ('Deliver'){
-        steps{
+        steps {
           sh './jenkins/scripts/deliver.sh'
         }
       }
